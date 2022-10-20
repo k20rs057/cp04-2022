@@ -212,8 +212,7 @@
 
         //ButtonDがクリックされたときの処理
         function btnDClick(e){
-            active=false;
-            period=60*parseInt($("#minute").val())+parseInt($("#second").val()+5);
+            active=true;
             
         }
 
@@ -253,7 +252,7 @@
     <button id="btnA">Start</button>
     <button id="btnB">Stop</button>
     <button id="btnC">Set</button>
-    <button id="btnD">+5秒</button>
+    <button id="btnD">再開</button>
     <input type="number" id="minute" value=0>
     <input type="number" id="second" value=5>
 </body>
