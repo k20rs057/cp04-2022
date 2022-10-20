@@ -39,6 +39,10 @@
             $('#btnC').click(function(e) {
                 btnCClick(e);
             });
+
+            $('#btnD').click(function(e){
+                btnDClick(e);
+            });
             init();
         });
 
@@ -162,6 +166,7 @@
             $('#btnA').prop('disabled', false);
             $('#btnB').prop('disabled', false);
             $('#btnC').prop('disabled', false);
+            $('#btnD').prop('disabled',false);
             btnCClick(null);
 
         }
@@ -205,6 +210,12 @@
 
         }
 
+        //ButtonDがクリックされたときの処理
+        function btnDClick(e){
+            active=false;
+            period=60*parseInt($("#minute").val())+parseInt($("#second").val()+5);
+            
+        }
 
         // 繰り返し実行する処理
         function timer() {
@@ -242,6 +253,7 @@
     <button id="btnA">Start</button>
     <button id="btnB">Stop</button>
     <button id="btnC">Set</button>
+    <button id="btnD">+5秒</button>
     <input type="number" id="minute" value=0>
     <input type="number" id="second" value=5>
 </body>
